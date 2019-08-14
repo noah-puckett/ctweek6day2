@@ -34,12 +34,12 @@ export default class App extends Component {
         return (<> 
         <Header header={textProps.header} />
         {/* <PhotoAlbum photos={textProps.photos} /> */}
+        <RandomColor />
         <Footer footer={textProps.footer} />
         {/* <Color name="PANK" hex="#00aa00" rgb={[200, 10, 20]}/> */}
         {/* <ColorPicker changeColorHandler={this.changeColor} />
         <ColorDisplay color={color} /> */}
         {/* { <Incrementer /> } */}
-        <RandomColor />
     </>);
     }
 }

@@ -4,8 +4,9 @@ import Header from './Header';
 // import Button from './Button';
 import Footer from './Footer';
 // import Color from './Color';
-// import ColorPicker from '../components/ColorPicker';
-import Incrementer from '../components/Incrementer';
+import ColorPicker from '../components/ColorPicker';
+import ColorDisplay from './ColorDisplay';
+// import Incrementer from '../components/Incrementer';
 
 
 const textProps = {
@@ -15,14 +16,28 @@ const textProps = {
 };
 
 export default class App extends Component {
+
+    state = {
+        color: ''
+    }
+    
+    changeColor = color => {
+        console.log(color);
+        this.setState({ color });
+    }
+
     render() {
+
+        const { color } = this.state;
+
         return (<> 
         <Header header={textProps.header} />
         {/* <PhotoAlbum photos={textProps.photos} /> */}
         <Footer footer={textProps.footer} />
         {/* <Color name="PANK" hex="#00aa00" rgb={[200, 10, 20]}/> */}
-        {/* <ColorPicker button1="red" button2="green" button3="blue" /> */}
-        { <Incrementer /> }
+        <ColorPicker changeColorHandler={this.changeColor} />
+        <ColorDisplay color={color} />
+        {/* { <Incrementer /> } */}
     </>);
     }
 }

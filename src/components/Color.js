@@ -1,25 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-function Color(props) {
-    return (<dl>
-        <dt>Name</dt>
-        <dd style={{ color: props.hex }}>{props.name}</dd>
+export default class Color extends Component {
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        hex: PropTypes.string.isRequired,
+        rgb: PropTypes.array.isRequired
+    }
 
-        <dt>Hex</dt>
-        <dd>{props.hex}</dd>
-
-        <dt>RGB</dt>
-        <dd>Red - {props.rgb[0]}</dd> 
-        <dd>Green - {props.rgb[1]}</dd> 
-        <dd>Blue - {props.rgb[2]}</dd>
-    </dl>);
+    render() {
+        return (<dl>
+            <dt>Name</dt>
+            <dd style={{ color: this.props.hex }}>{this.props.name}</dd>
+    
+            <dt>Hex</dt>
+            <dd>{this.props.hex}</dd>
+    
+            <dt>RGB</dt>
+            <dd>Red - {this.props.rgb[0]}</dd> 
+            <dd>Green - {this.props.rgb[1]}</dd> 
+            <dd>Blue - {this.props.rgb[2]}</dd>
+        </dl>);
+    }
 }
-
-Color.propTypes = {
-    name: PropTypes.string.isRequired,
-    hex: PropTypes.string.isRequired,
-    rgb: PropTypes.array.isRequired
-};
-
-export default Color;

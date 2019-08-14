@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import ButtonCSS from '../css/ButtonCSS.css';
 
-function Button() {
-    const [count, setCount] = useState(0);
-    return (<> <button onClick={() => setCount(count + 1)}>PUSH IT FOR FUN AND PROFIT</button> <p>times you have PUSHED IT: {count} </p> </>);
+export default class Button extends Component {
+    static propTypes = {
+        color: PropTypes.string.isRequired
+    }
+    render() {
+        return (<> 
+        <button className={ButtonCSS[this.props.color]} onClick={() => console.log(this.props.color, 'clicked')}>{this.props.color}</button>
+        </>);
+    }
 }
 
-export default Button;

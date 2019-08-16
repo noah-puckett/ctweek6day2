@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import CreateColor from './CreateColor';
-import ColorList from './ColorList';
-import WaterTracker from './WaterTracker';
+// import CreateColor from './CreateColor';
+// import ColorList from './ColorList';
+// import WaterTracker from './WaterTracker';
+import Quotes from './stateless/Quotes';
+import TopQuotes from './stateful/TopQuotes';
 // import TextFormatter from './TextFormatter';
 // import Photo from './Photo';
 // import Photos from './Photos';
@@ -29,6 +31,10 @@ export default class App extends Component {
         //     { src: './src/assets/heart.jpeg' }
         // ];
 
+        // const quotes = [
+        //     { image: './src/assets/acl.jpg', quote: 'I am living my best life', character: 'me' }
+        // ];
+
         return (<> 
         <Header header="Welcome to my feelings!" />
         {/* <Colors colors={colors} /> */}
@@ -36,7 +42,8 @@ export default class App extends Component {
         {/* <PhotoAlbum photos={photos} title='I THINK IT IS VERY BRAVE AND SEXY OF ME TO KEEP TRYING'/> */}
         {/* <TextFormatter /> */}
         {/* <ColorList /> */}
-        <WaterTracker />
+        {/* <WaterTracker /> */}
+        <TopQuotes count={10} />
         <Footer footer="goodnight" />
     </>);
     }

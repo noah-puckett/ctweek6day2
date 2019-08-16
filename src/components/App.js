@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import CreateColor from './CreateColor';
 import ColorList from './ColorList';
+import WaterTracker from './WaterTracker';
 // import TextFormatter from './TextFormatter';
 // import Photo from './Photo';
 // import Photos from './Photos';
@@ -34,7 +35,8 @@ export default class App extends Component {
         {/* <Photos photos={photos} /> */}
         {/* <PhotoAlbum photos={photos} title='I THINK IT IS VERY BRAVE AND SEXY OF ME TO KEEP TRYING'/> */}
         {/* <TextFormatter /> */}
-        <ColorList />
+        {/* <ColorList /> */}
+        <WaterTracker />
         <Footer footer="goodnight" />
     </>);
     }

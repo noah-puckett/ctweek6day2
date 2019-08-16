@@ -21,7 +21,7 @@ export default class WaterTracker extends Component {
 
     render() {
         return (<> 
-            <form name='oz' onSubmit={this.increment}>Pick yer color, pal
+            <form onSubmit={this.increment}>Pick yer color, pal
                 <input name='oz' type='number' onChange={this.onChange} />
                 <span> {this.state.totalWater} oz DRANK </span> 
                 <button>drANk wOter</button>

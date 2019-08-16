@@ -4,8 +4,11 @@ import Footer from './Footer';
 // import CreateColor from './CreateColor';
 // import ColorList from './ColorList';
 // import WaterTracker from './WaterTracker';
-import Quotes from './stateless/Quotes';
-import TopQuotes from './stateful/TopQuotes';
+// import Quotes from './stateless/Quotes';
+// import TopQuotes from './stateful/TopQuotes';
+// import Character from './stateless/Character';
+import Characters from './stateless/Characters';
+import AllCharacters from './stateful/AllCharacters';
 // import TextFormatter from './TextFormatter';
 // import Photo from './Photo';
 // import Photos from './Photos';
@@ -35,6 +38,10 @@ export default class App extends Component {
         //     { image: './src/assets/acl.jpg', quote: 'I am living my best life', character: 'me' }
         // ];
 
+        // const characters = [
+        //     { name: 'fred', status: 'single', species: 'cute', image: './src/assets/heart.jpeg' },
+        // ];
+
         return (<> 
         <Header header="Welcome to my feelings!" />
         {/* <Colors colors={colors} /> */}
@@ -43,7 +50,9 @@ export default class App extends Component {
         {/* <TextFormatter /> */}
         {/* <ColorList /> */}
         {/* <WaterTracker /> */}
-        <TopQuotes count={10} />
+        {/* <TopQuotes count={10} /> */}
+        {/* <Characters characters={characters} /> */}
+        <AllCharacters count={10} />
         <Footer footer="goodnight" />
     </>);
     }

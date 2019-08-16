@@ -19,9 +19,13 @@ export default class WaterTracker extends Component {
         }); 
     }
 
+    formReset = () => { 
+        document.getElementById('form').reset();
+    }
+
     render() {
         return (<> 
-            <form onSubmit={this.increment}>
+            <form id='form' onSubmit={this.increment}>
                 <input name='oz' type='number' onChange={this.onChange} /> HYDRATE OR DIEDRATE
                 <p> {this.state.totalWater} oz DRANK </p> 
                 <progress max={100} value={this.state.totalWater} onChange={this.onChange}></progress>

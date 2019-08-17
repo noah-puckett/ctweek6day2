@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<h1>
-  Hello World
-</h1>
+<Fragment>
+  <Header
+    header="Welcome to my feelings!"
+  />
+  <AllCharacters
+    page={10}
+  />
+  <Footer
+    footer="goodnight"
+  />
+</Fragment>
 `;

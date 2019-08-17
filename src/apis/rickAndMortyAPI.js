@@ -11,3 +11,16 @@ export const getCharacters = (count = 10) => {
             return json;
         });
 };
+
+export const getPage = (page) => {
+
+    return fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
+        .then(res => ([res.ok, res.json()]))
+        .then(([ok, json]) => {
+            if(!ok) throw 'Unable to fetch quotes';
+            return json;
+        });
+        // .then(json => {
+        //     return json;
+        // });
+};

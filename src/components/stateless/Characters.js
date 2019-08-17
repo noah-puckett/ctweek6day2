@@ -6,7 +6,7 @@ import Character from '../../components/stateless/Character';
 function Characters({ characters }) {
     const characterArray = characters.map(character => {
         return (
-            <li key={character.name}>
+            <li key={character.id}>
                 <Character name={character.name} status={character.status} species={character.species} image={character.image} />
             </li>
         );

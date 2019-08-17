@@ -7,7 +7,7 @@ import Footer from './Footer';
 // import Quotes from './stateless/Quotes';
 // import TopQuotes from './stateful/TopQuotes';
 // import Character from './stateless/Character';
-import Characters from './stateless/Characters';
+// import Characters from './stateless/Characters';
 import AllCharacters from './stateful/AllCharacters';
 // import TextFormatter from './TextFormatter';
 // import Photo from './Photo';
@@ -52,7 +52,7 @@ export default class App extends Component {
         {/* <WaterTracker /> */}
         {/* <TopQuotes count={10} /> */}
         {/* <Characters characters={characters} /> */}
-        <AllCharacters count={10} />
+        <AllCharacters page={10} />
         <Footer footer="goodnight" />
     </>);
     }
